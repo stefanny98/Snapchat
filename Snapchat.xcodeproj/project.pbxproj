@@ -17,6 +17,9 @@
 		E2D1955E20ACD575000B1829 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2D1955C20ACD575000B1829 /* Main.storyboard */; };
 		E2D1956020ACD575000B1829 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2D1955F20ACD575000B1829 /* Assets.xcassets */; };
 		E2D1956320ACD575000B1829 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2D1956120ACD575000B1829 /* LaunchScreen.storyboard */; };
+		E2D47E6420BF2F6300477443 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D47E6320BF2F6300477443 /* Usuario.swift */; };
+		E2D47E6620BF5AD300477443 /* Snap.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D47E6520BF5AD300477443 /* Snap.swift */; };
+		E2D47E6820BF600A00477443 /* VerSnapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D47E6720BF600A00477443 /* VerSnapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +38,9 @@
 		E2D1955F20ACD575000B1829 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2D1956220ACD575000B1829 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2D1956420ACD575000B1829 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2D47E6320BF2F6300477443 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		E2D47E6520BF5AD300477443 /* Snap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snap.swift; sourceTree = "<group>"; };
+		E2D47E6720BF600A00477443 /* VerSnapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerSnapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,19 +93,38 @@
 		E2D1955720ACD575000B1829 /* Snapchat */ = {
 			isa = PBXGroup;
 			children = (
+				E2D47E6220BF2F4C00477443 /* Modelos */,
+				E2D47E6120BF2ED500477443 /* ViewControllers */,
 				E2AF5C6120B5FF2800B346B5 /* Snapchat.entitlements */,
 				E2D1955820ACD575000B1829 /* AppDelegate.swift */,
-				E2D1955A20ACD575000B1829 /* iniciarSesionViewController.swift */,
 				E2AF5C5F20B5F5AD00B346B5 /* GoogleService-Info.plist */,
 				E2D1955C20ACD575000B1829 /* Main.storyboard */,
 				E2D1955F20ACD575000B1829 /* Assets.xcassets */,
 				E2D1956120ACD575000B1829 /* LaunchScreen.storyboard */,
 				E2D1956420ACD575000B1829 /* Info.plist */,
-				E2AF5C6220B6019300B346B5 /* SnapsViewController.swift */,
-				E2AF5C6420B6062700B346B5 /* ImagenViewController.swift */,
-				E2AF5C6620B60FA800B346B5 /* ElegirUsuarioViewController.swift */,
 			);
 			path = Snapchat;
+			sourceTree = "<group>";
+		};
+		E2D47E6120BF2ED500477443 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E2D1955A20ACD575000B1829 /* iniciarSesionViewController.swift */,
+				E2AF5C6620B60FA800B346B5 /* ElegirUsuarioViewController.swift */,
+				E2AF5C6420B6062700B346B5 /* ImagenViewController.swift */,
+				E2AF5C6220B6019300B346B5 /* SnapsViewController.swift */,
+				E2D47E6720BF600A00477443 /* VerSnapViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E2D47E6220BF2F4C00477443 /* Modelos */ = {
+			isa = PBXGroup;
+			children = (
+				E2D47E6320BF2F6300477443 /* Usuario.swift */,
+				E2D47E6520BF5AD300477443 /* Snap.swift */,
+			);
+			path = Modelos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,6 +230,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Snapchat/Pods-Snapchat-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -212,6 +238,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -228,8 +255,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2D1955B20ACD575000B1829 /* iniciarSesionViewController.swift in Sources */,
+				E2D47E6420BF2F6300477443 /* Usuario.swift in Sources */,
 				E2AF5C6520B6062700B346B5 /* ImagenViewController.swift in Sources */,
 				E2D1955920ACD575000B1829 /* AppDelegate.swift in Sources */,
+				E2D47E6820BF600A00477443 /* VerSnapViewController.swift in Sources */,
+				E2D47E6620BF5AD300477443 /* Snap.swift in Sources */,
 				E2AF5C6320B6019300B346B5 /* SnapsViewController.swift in Sources */,
 				E2AF5C6720B60FA800B346B5 /* ElegirUsuarioViewController.swift in Sources */,
 			);
