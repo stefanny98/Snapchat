@@ -13,5 +13,7 @@ class Snap{
     var from = ""
     var id = ""
     var imagenID = ""
-    
+    var sonidoURL = ""
+    var sonidoID = ""
+    var tipo = ""
 }

@@ -16,7 +16,9 @@ class ElegirUsuarioViewController: UIViewController, UITableViewDataSource, UITa
     var imagenURL = ""
     var descrip = ""
     var imagenID = ""
-    
+    var sonidoURL = ""
+    var sonidoID = ""
+    var tipo = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -41,7 +43,12 @@ class ElegirUsuarioViewController: UIViewController, UITableViewDataSource, UITa
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let usuario = usuarios[indexPath.row]
-        let snap = ["from": Auth.auth().currentUser!.email, "descripcion": descrip, "imagenURL": imagenURL, "imagenID":imagenID]
+        var snap:Any
+        if (tipo == "sonido"){
+            snap = ["from": Auth.auth().currentUser!.email, "descripcion": descrip, "sonidoURL": sonidoURL, "sonidoID":sonidoID]
+        } else {
+            snap = ["from": Auth.auth().currentUser!.email, "descripcion": descrip, "imagenURL": imagenURL, "imagenID":imagenID]
+        }
         Database.database().reference().child("usuarios").child(usuario.uid).child("snaps").childByAutoId().setValue(snap)
         navigationController?.popToRootViewController(animated: true)
     }

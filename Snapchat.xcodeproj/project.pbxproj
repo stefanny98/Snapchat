@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E088EC6900BDB0A09D648360 /* Pods_Snapchat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E798B95581831DDD2943E4 /* Pods_Snapchat.framework */; };
+		E296AF4420D1962A00750150 /* SoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E296AF4320D1962A00750150 /* SoundsViewController.swift */; };
+		E296AF4620D1CE9E00750150 /* SonidoSnapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E296AF4520D1CE9E00750150 /* SonidoSnapViewController.swift */; };
 		E2AF5C6020B5F5AD00B346B5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2AF5C5F20B5F5AD00B346B5 /* GoogleService-Info.plist */; };
 		E2AF5C6320B6019300B346B5 /* SnapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AF5C6220B6019300B346B5 /* SnapsViewController.swift */; };
 		E2AF5C6520B6062700B346B5 /* ImagenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AF5C6420B6062700B346B5 /* ImagenViewController.swift */; };
@@ -26,6 +28,8 @@
 		219BE2FCE2239DC1BB77C789 /* Pods-Snapchat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snapchat.release.xcconfig"; path = "Pods/Target Support Files/Pods-Snapchat/Pods-Snapchat.release.xcconfig"; sourceTree = "<group>"; };
 		47E798B95581831DDD2943E4 /* Pods_Snapchat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Snapchat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C76D6EF1C22604D0CE777D48 /* Pods-Snapchat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snapchat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Snapchat/Pods-Snapchat.debug.xcconfig"; sourceTree = "<group>"; };
+		E296AF4320D1962A00750150 /* SoundsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsViewController.swift; sourceTree = "<group>"; };
+		E296AF4520D1CE9E00750150 /* SonidoSnapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SonidoSnapViewController.swift; sourceTree = "<group>"; };
 		E2AF5C5F20B5F5AD00B346B5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E2AF5C6120B5FF2800B346B5 /* Snapchat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Snapchat.entitlements; sourceTree = "<group>"; };
 		E2AF5C6220B6019300B346B5 /* SnapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapsViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +118,8 @@
 				E2AF5C6420B6062700B346B5 /* ImagenViewController.swift */,
 				E2AF5C6220B6019300B346B5 /* SnapsViewController.swift */,
 				E2D47E6720BF600A00477443 /* VerSnapViewController.swift */,
+				E296AF4320D1962A00750150 /* SoundsViewController.swift */,
+				E296AF4520D1CE9E00750150 /* SonidoSnapViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -256,11 +262,13 @@
 			files = (
 				E2D1955B20ACD575000B1829 /* iniciarSesionViewController.swift in Sources */,
 				E2D47E6420BF2F6300477443 /* Usuario.swift in Sources */,
+				E296AF4420D1962A00750150 /* SoundsViewController.swift in Sources */,
 				E2AF5C6520B6062700B346B5 /* ImagenViewController.swift in Sources */,
 				E2D1955920ACD575000B1829 /* AppDelegate.swift in Sources */,
 				E2D47E6820BF600A00477443 /* VerSnapViewController.swift in Sources */,
 				E2D47E6620BF5AD300477443 /* Snap.swift in Sources */,
 				E2AF5C6320B6019300B346B5 /* SnapsViewController.swift in Sources */,
+				E296AF4620D1CE9E00750150 /* SonidoSnapViewController.swift in Sources */,
 				E2AF5C6720B60FA800B346B5 /* ElegirUsuarioViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
